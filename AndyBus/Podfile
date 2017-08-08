@@ -1,0 +1,22 @@
+target ‘AndyBus’ do
+pod 'SVProgressHUD','~> 1.1.3'
+pod 'AFNetworking','~> 2.6.0'
+pod 'IQKeyboardManager'
+pod 'Masonry'
+pod 'MJExtension'
+pod 'SDAutoLayout'
+pod 'HMSegmentedControl'
+pod 'YYText'
+pod 'MBProgressHUD', '~> 0.9.1'
+pod 'JPush'
+pod 'MJRefresh'
+#pod 'SDWebImage'
+#图片 视频查看  环信里边也用到了
+pod 'MWPhotoBrowser'
+#一个浮动tf、tv
+pod 'JVFloatLabeledTextField'
+pod 'AMapSearch'
+pod 'AMapLocation'
+pod 'AMap2DMap'
+end
+    

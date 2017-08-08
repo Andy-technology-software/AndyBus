@@ -1,0 +1,87 @@
+//
+//  PrefixHeader.pch
+//  AndyNewFram
+//
+//  Created by lingnet on 2017/4/7.
+//  Copyright © 2017年 xurenqinag. All rights reserved.
+//
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+
+#import "Masonry.h"
+#import <IQKeyboardManager.h>
+#import <IQKeyboardReturnKeyHandler.h>
+#import <IQUIView+IQKeyboardToolbar.h>
+#import "MJRefresh.h"
+#import "AFNetworking.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "HMSegmentedControl.h"
+#import "MJExtension.h"
+#import "MyController.h"
+#import "RegularExpressions.h"
+#import "HUD.h"
+#import "AppDelegate.h"
+//环信
+#import <Foundation/Foundation.h>
+#import <Hyphenate/Hyphenate.h>
+#import "EaseUI.h"
+#import "EaseSDKHelper.h"
+#define DEMO_CALL 1
+
+//请求
+#import "requestURL.h"
+#import "requestService.h"
+#import "XRQRequestClient.h"
+
+//获取唯一标识
+#import "XRQGetOnlyUUID.h"
+
+//获取当前设备ip
+#import "XRQGetIP.h"
+
+// 引入JPush功能所需头文件
+#import "JPUSHService.h"
+// iOS10注册APNs所需头文件
+#ifdef NSFoundationVersionNumber_iOS_9_x_Max
+#import <UserNotifications/UserNotifications.h>
+#endif
+
+//仿钉钉弹出毛玻璃菜单
+#import "BlurEffectMenu.h"
+
+//计算cell行高
+#import "Masonry/View+MASAdditions.h"
+#import "UITableViewCell+HYBMasonryAutoCellHeight.h"
+//无限轮滚
+#import "CycleScrollView.h"
+
+//看图片、视频
+#import "MWPhotoBrowser.h"
+
+//浮动  登录用了
+#import "JVFloatLabeledTextField.h"
+#import "JVFloatLabeledTextView.h"
+
+
+#import "UIBarButtonItem+XPFExtension.h"
+#import "UIView+XPFExtension.h"
+#import "XPFTabBar.h"
+
+#import <MAMapKit/MAMapKit.h>
+#import <AMapSearchKit/AMapSearchKit.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import <AMapLocationKit/AMapLocationKit.h>
+
+/** self.view 宽度、高度 */
+#define SELF_WIDTH (self.view.bounds.size.width)
+#define SELF_HEIGHT (self.view.bounds.size.height)
+
+#define KScreenWidth   [UIScreen mainScreen].bounds.size.width
+#define KScreenHeight  [UIScreen mainScreen].bounds.size.height
+
+#define KHistorySearchPath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"PYSearchhistories.plist"]
+
+#define KColor(r,g,b) [UIColor colorWithRed:(r/255.0) green:(g/255.0) blue:(b/255.0) alpha:1.0]
+
+#define MAPKEY @"03e910bef934c26b88acd2d25efe9761"
+#endif /* PrefixHeader_pch */
