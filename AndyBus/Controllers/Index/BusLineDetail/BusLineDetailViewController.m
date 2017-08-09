@@ -67,7 +67,6 @@
             model1.DIRECTION = [cell4 dump];
             [self.datasourceArr addObject:model1];
             
-            
             NSLog(@"%@    ",model1.T_NAME);
         }
     
@@ -112,34 +111,46 @@
     UIView* headView = [MyController viewWithFrame:CGRectMake(0, 0, [MyController getScreenWidth], 80)];
     headView.backgroundColor = [UIColor whiteColor];
     
+    UIButton* changeBtn = [MyController createButtonWithFrame:headView.frame ImageName:@"shijian" Target:self Action:@selector(changeBtn) Title:@"换向"];
+    [changeBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    changeBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+    [headView addSubview:changeBtn];
+    
+    [changeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(-6);
+        make.width.mas_offset(49);
+        make.height.mas_offset(49);
+        make.centerY.mas_equalTo(headView);
+    }];
+    
+    UILabel* priceLable = [MyController createLabelWithFrame:headView.frame Font:14 Text:[NSString stringWithFormat:@"%@",self.model0.TICKET_PRICE]];
+    priceLable.textColor = [UIColor orangeColor];
+    priceLable.textAlignment = NSTextAlignmentRight;
+    [headView addSubview:priceLable];
+    
+    [priceLable mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(changeBtn.mas_left).mas_offset(-6);
+        make.top.mas_equalTo(10);
+    }];
+    
     UILabel* titleLable = [MyController createLabelWithFrame:headView.frame Font:16 Text:[NSString stringWithFormat:@"%@ -> %@",self.model0.ILLNESSES,self.model0.DESTINATION]];
     [headView addSubview:titleLable];
     
     [titleLable mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(10);
-        make.right.mas_equalTo(-60);
-        make.top.mas_equalTo(10);
+        make.top.mas_equalTo(priceLable);
+        make.right.mas_equalTo(priceLable.mas_left);
     }];
     
-    UILabel* timeLable = [MyController createLabelWithFrame:headView.frame Font:14 Text:[NSString stringWithFormat:@"运营时间：%@  %@",self.model0.DOWN_TIME,self.model0.TICKET_PRICE]];
+    UILabel* timeLable = [MyController createLabelWithFrame:headView.frame Font:14 Text:[NSString stringWithFormat:@"运营时间：%@",self.model0.DOWN_TIME]];
     timeLable.textColor = [UIColor lightGrayColor];
+    timeLable.numberOfLines = 0;
     [headView addSubview:timeLable];
     
     [timeLable mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(titleLable);
-        make.right.mas_equalTo(titleLable);
-        make.top.mas_equalTo(titleLable.mas_bottom).mas_offset(5);
-    }];
-    
-    UIButton* changeBtn = [MyController createButtonWithFrame:headView.frame ImageName:@"shijian" Target:self Action:@selector(changeBtn) Title:@"换向"];
-    [changeBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
-    [headView addSubview:changeBtn];
-    
-    [changeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_equalTo(-10);
-        make.width.mas_offset(60);
-        make.height.mas_offset(60);
-        make.centerY.mas_equalTo(headView);
+        make.right.mas_equalTo(priceLable);
+        make.top.mas_equalTo(titleLable.mas_bottom).mas_offset(6);
     }];
     
     return headView;
