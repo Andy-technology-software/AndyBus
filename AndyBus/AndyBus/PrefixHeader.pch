@@ -62,6 +62,7 @@
 #import "JVFloatLabeledTextField.h"
 #import "JVFloatLabeledTextView.h"
 
+#import "DHxlsReaderIOS.h"
 
 #import "UIBarButtonItem+XPFExtension.h"
 #import "UIView+XPFExtension.h"

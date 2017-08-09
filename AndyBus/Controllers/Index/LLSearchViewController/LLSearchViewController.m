@@ -11,7 +11,10 @@
 #import "LLSearchSuggestionVC.h"
 #import "LLSearchView.h"
 
+#import "BusLineDetailViewController.h"
 
+#import "BusLineDetail0Model.h"
+extern int xls_debug;
 @interface LLSearchViewController ()<UISearchBarDelegate>
 
 @property (nonatomic, strong) UISearchBar *searchBar;
@@ -20,6 +23,7 @@
 @property (nonatomic, strong) NSMutableArray *historyArray;
 @property (nonatomic, strong) LLSearchSuggestionVC *searchSuggestVC;
 
+@property(nonatomic,copy)NSString* pathStr;
 @end
 
 @implementation LLSearchViewController
@@ -98,7 +102,29 @@
     [self.view addSubview:self.searchView];
     [self.view addSubview:self.searchSuggestVC.view];
     [self addChildViewController:_searchSuggestVC];
+    
+    
+//    [self downLoadRoads];
 }
+
+
+- (void)downLoadRoads{
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    
+    NSURL *URL = [NSURL URLWithString:@"http://27.223.79.50:86/20150812140713/route.xls"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    
+    NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+        NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
+        return [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
+    } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+        NSLog(@"File downloaded to: %@", filePath);
+        self.pathStr = [NSString stringWithFormat:@"%@",filePath];
+    }];
+    [downloadTask resume];
+}
+
 
 
 - (void)setBarButtonItem
@@ -152,6 +178,62 @@
 //    searchResultVC.historyArray = _historyArray;
 //    [self.navigationController pushViewController:searchResultVC animated:YES];
 //    [self setHistoryArrWithStr:str];
+    
+    NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"route.xls"];
+    DHxlsReader *reader = [DHxlsReader xlsReaderFromFile:path];
+    assert(reader);
+#if 0
+    [reader startIterator:0];
+    
+    while(YES) {
+        DHcell *cell = [reader nextCell];
+        if(cell.type == cellBlank) break;
+        
+        text = [text stringByAppendingFormat:@"\n%@\n", [cell dump]];
+    }
+#else
+    int row = 2;
+    while(YES) {
+        
+        DHcell *cell0 = [reader cellInWorkSheetIndex:0 row:row col:1];
+        if(cell0.type == cellBlank) break;
+        DHcell *cell = [reader cellInWorkSheetIndex:0 row:row col:2];
+        if(cell.type == cellBlank) break;
+        DHcell *cell2 = [reader cellInWorkSheetIndex:0 row:row col:4];
+        if(cell2.type == cellBlank) break;
+        DHcell *cell3 = [reader cellInWorkSheetIndex:0 row:row col:5];
+        if(cell3.type == cellBlank) break;
+        DHcell *cell6 = [reader cellInWorkSheetIndex:0 row:row col:6];
+        if(cell6.type == cellBlank) break;
+        DHcell *cell7 = [reader cellInWorkSheetIndex:0 row:row col:7];
+        if(cell7.type == cellBlank) break;
+        DHcell *cell8 = [reader cellInWorkSheetIndex:0 row:row col:8];
+        if(cell8.type == cellBlank) break;
+        DHcell *cell9 = [reader cellInWorkSheetIndex:0 row:row col:8];
+        if(cell9.type == cellBlank) break;
+        DHcell *cell1 = [reader cellInWorkSheetIndex:0 row:row col:3];
+        NSLog(@"\n  几路车：%@\n   查表用的号：%@\n   票价:%@\n   起点:%@\n   终点:%@\n",[cell0 dump], [cell dump], [cell1 dump], [cell2 dump], [cell3 dump]);
+        row++;
+        
+        //text = [text stringByAppendingFormat:@"\n%@\n", [cell dump]];
+        //text = [text stringByAppendingFormat:@"\n%@\n", [cell1 dump]];
+        if ([@"618" isEqualToString:[cell0 dump]]) {
+            BusLineDetailViewController* vc = [[BusLineDetailViewController alloc] init];
+            vc.model0 = [[BusLineDetail0Model alloc] init];
+            vc.model0.H_NAME = [cell0 dump];
+            vc.model0.H_LINE = [cell dump];
+            vc.model0.TICKET_PRICE = [cell1 dump];
+            vc.model0.ILLNESSES = [cell2 dump];
+            vc.model0.DESTINATION = [cell3 dump];
+            vc.model0.DOWN_TIME = [cell6 dump];
+            vc.model0.UP_TIME = [cell7 dump];
+            vc.model0.H_CPY = [cell8 dump];
+            vc.model0.CMD = [cell9 dump];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+    }
+#endif
+
 }
 
 - (void)setHistoryArrWithStr:(NSString *)str

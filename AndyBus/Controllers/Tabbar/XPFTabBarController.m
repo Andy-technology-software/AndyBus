@@ -115,8 +115,8 @@
     // 本次选择删除 view ，没有选 隐藏
     switch (btn.tag) {
         case 10001: {
-            UIViewController *d = [[UIViewController alloc] init];
-            [self presentViewController:d animated:YES completion:nil];
+//            UIViewController *d = [[UIViewController alloc] init];
+//            [self presentViewController:d animated:YES completion:nil];
         } break;
         case 10002: {
             

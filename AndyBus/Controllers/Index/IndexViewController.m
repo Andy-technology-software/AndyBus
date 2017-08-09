@@ -47,6 +47,9 @@
     
     [self createTableView];
     [self getIndexBannder];
+    
+//    [self downLoadRoads];
+    
 }
 
 - (void)createLeftNvc{

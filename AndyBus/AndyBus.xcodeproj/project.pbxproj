@@ -163,6 +163,26 @@
 		2183FD581F380D6200550F27 /* login.m in Sources */ = {isa = PBXBuildFile; fileRef = 2183FD571F380D6200550F27 /* login.m */; };
 		2183FD591F3810B300550F27 /* Hyphenate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2183FC471F38028400550F27 /* Hyphenate.framework */; };
 		2183FD5A1F3810B300550F27 /* Hyphenate.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2183FC471F38028400550F27 /* Hyphenate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		218DE3321F3AE463006DF90E /* route.xls in Resources */ = {isa = PBXBuildFile; fileRef = 218DE3301F3AE463006DF90E /* route.xls */; };
+		218DE3331F3AE463006DF90E /* linesite.xls in Resources */ = {isa = PBXBuildFile; fileRef = 218DE3311F3AE463006DF90E /* linesite.xls */; };
+		218DE34F1F3AE531006DF90E /* main11.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 218DE3371F3AE531006DF90E /* main11.cpp */; };
+		218DE3501F3AE531006DF90E /* XlsReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 218DE3381F3AE531006DF90E /* XlsReader.cpp */; };
+		218DE3511F3AE531006DF90E /* DHcell.m in Sources */ = {isa = PBXBuildFile; fileRef = 218DE33D1F3AE531006DF90E /* DHcell.m */; };
+		218DE3521F3AE531006DF90E /* DHxlsReaderIOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 218DE3401F3AE531006DF90E /* DHxlsReaderIOS.m */; };
+		218DE3531F3AE531006DF90E /* getopt.c in Sources */ = {isa = PBXBuildFile; fileRef = 218DE34A1F3AE531006DF90E /* getopt.c */; };
+		218DE3541F3AE531006DF90E /* ole.c in Sources */ = {isa = PBXBuildFile; fileRef = 218DE34B1F3AE531006DF90E /* ole.c */; };
+		218DE3551F3AE531006DF90E /* xls.c in Sources */ = {isa = PBXBuildFile; fileRef = 218DE34C1F3AE531006DF90E /* xls.c */; };
+		218DE3561F3AE531006DF90E /* xls2csv.c in Sources */ = {isa = PBXBuildFile; fileRef = 218DE34D1F3AE531006DF90E /* xls2csv.c */; };
+		218DE3571F3AE531006DF90E /* xlstool.c in Sources */ = {isa = PBXBuildFile; fileRef = 218DE34E1F3AE531006DF90E /* xlstool.c */; };
+		218DE3591F3AE576006DF90E /* libiconv.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 218DE3581F3AE576006DF90E /* libiconv.2.tbd */; };
+		218DE35B1F3AE57C006DF90E /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 218DE35A1F3AE57C006DF90E /* libiconv.tbd */; };
+		218DE35D1F3AE587006DF90E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 218DE35C1F3AE587006DF90E /* UIKit.framework */; };
+		218DE35F1F3AE58F006DF90E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 218DE35E1F3AE58F006DF90E /* Foundation.framework */; };
+		218DE3611F3AE598006DF90E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 218DE3601F3AE598006DF90E /* CoreGraphics.framework */; };
+		218DE3651F3AF65A006DF90E /* BusLineDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 218DE3641F3AF65A006DF90E /* BusLineDetailViewController.m */; };
+		218DE3691F3AF698006DF90E /* BusLineDetail0Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 218DE3681F3AF698006DF90E /* BusLineDetail0Model.m */; };
+		218DE36C1F3AF6A0006DF90E /* BusLineDetail1Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 218DE36B1F3AF6A0006DF90E /* BusLineDetail1Model.m */; };
+		218DE3701F3AF83D006DF90E /* BusLineDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 218DE36F1F3AF83D006DF90E /* BusLineDetailTableViewCell.m */; };
 		21A683241F3814F90041AC34 /* IndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A683231F3814F90041AC34 /* IndexViewController.m */; };
 		21A683281F3819B70041AC34 /* IndexModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A683271F3819B70041AC34 /* IndexModel.m */; };
 		21A6832C1F3819C80041AC34 /* IndexViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A6832B1F3819C80041AC34 /* IndexViewTableViewCell.m */; };
@@ -463,6 +483,43 @@
 		2183FD531F380CB300550F27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2183FD561F380D6200550F27 /* login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = login.h; sourceTree = "<group>"; };
 		2183FD571F380D6200550F27 /* login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = login.m; sourceTree = "<group>"; };
+		218DE3301F3AE463006DF90E /* route.xls */ = {isa = PBXFileReference; lastKnownFileType = file; path = route.xls; sourceTree = "<group>"; };
+		218DE3311F3AE463006DF90E /* linesite.xls */ = {isa = PBXFileReference; lastKnownFileType = file; path = linesite.xls; sourceTree = "<group>"; };
+		218DE3351F3AE531006DF90E /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		218DE3371F3AE531006DF90E /* main11.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main11.cpp; sourceTree = "<group>"; };
+		218DE3381F3AE531006DF90E /* XlsReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XlsReader.cpp; sourceTree = "<group>"; };
+		218DE3391F3AE531006DF90E /* XlsReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XlsReader.h; sourceTree = "<group>"; };
+		218DE33B1F3AE531006DF90E /* DHcell-Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DHcell-Private.h"; sourceTree = "<group>"; };
+		218DE33C1F3AE531006DF90E /* DHcell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHcell.h; sourceTree = "<group>"; };
+		218DE33D1F3AE531006DF90E /* DHcell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHcell.m; sourceTree = "<group>"; };
+		218DE33E1F3AE531006DF90E /* DHxlsReaderIOS-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DHxlsReaderIOS-Prefix.pch"; sourceTree = "<group>"; };
+		218DE33F1F3AE531006DF90E /* DHxlsReaderIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHxlsReaderIOS.h; sourceTree = "<group>"; };
+		218DE3401F3AE531006DF90E /* DHxlsReaderIOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHxlsReaderIOS.m; sourceTree = "<group>"; };
+		218DE3421F3AE531006DF90E /* brdb.c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brdb.c.h; sourceTree = "<group>"; };
+		218DE3431F3AE531006DF90E /* brdb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brdb.h; sourceTree = "<group>"; };
+		218DE3441F3AE531006DF90E /* ole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ole.h; sourceTree = "<group>"; };
+		218DE3451F3AE531006DF90E /* xls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xls.h; sourceTree = "<group>"; };
+		218DE3461F3AE531006DF90E /* xlsstruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xlsstruct.h; sourceTree = "<group>"; };
+		218DE3471F3AE531006DF90E /* xlstool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xlstool.h; sourceTree = "<group>"; };
+		218DE3481F3AE531006DF90E /* xlstypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xlstypes.h; sourceTree = "<group>"; };
+		218DE34A1F3AE531006DF90E /* getopt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = getopt.c; sourceTree = "<group>"; };
+		218DE34B1F3AE531006DF90E /* ole.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ole.c; sourceTree = "<group>"; };
+		218DE34C1F3AE531006DF90E /* xls.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = xls.c; sourceTree = "<group>"; };
+		218DE34D1F3AE531006DF90E /* xls2csv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = xls2csv.c; sourceTree = "<group>"; };
+		218DE34E1F3AE531006DF90E /* xlstool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = xlstool.c; sourceTree = "<group>"; };
+		218DE3581F3AE576006DF90E /* libiconv.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.tbd; path = usr/lib/libiconv.2.tbd; sourceTree = SDKROOT; };
+		218DE35A1F3AE57C006DF90E /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		218DE35C1F3AE587006DF90E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		218DE35E1F3AE58F006DF90E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		218DE3601F3AE598006DF90E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		218DE3631F3AF65A006DF90E /* BusLineDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusLineDetailViewController.h; sourceTree = "<group>"; };
+		218DE3641F3AF65A006DF90E /* BusLineDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusLineDetailViewController.m; sourceTree = "<group>"; };
+		218DE3671F3AF698006DF90E /* BusLineDetail0Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusLineDetail0Model.h; sourceTree = "<group>"; };
+		218DE3681F3AF698006DF90E /* BusLineDetail0Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusLineDetail0Model.m; sourceTree = "<group>"; };
+		218DE36A1F3AF6A0006DF90E /* BusLineDetail1Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusLineDetail1Model.h; sourceTree = "<group>"; };
+		218DE36B1F3AF6A0006DF90E /* BusLineDetail1Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusLineDetail1Model.m; sourceTree = "<group>"; };
+		218DE36E1F3AF83D006DF90E /* BusLineDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusLineDetailTableViewCell.h; sourceTree = "<group>"; };
+		218DE36F1F3AF83D006DF90E /* BusLineDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusLineDetailTableViewCell.m; sourceTree = "<group>"; };
 		21A683221F3814F90041AC34 /* IndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexViewController.h; sourceTree = "<group>"; };
 		21A683231F3814F90041AC34 /* IndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexViewController.m; sourceTree = "<group>"; };
 		21A683261F3819B70041AC34 /* IndexModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexModel.h; sourceTree = "<group>"; };
@@ -491,6 +548,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				218DE3611F3AE598006DF90E /* CoreGraphics.framework in Frameworks */,
+				218DE35F1F3AE58F006DF90E /* Foundation.framework in Frameworks */,
+				218DE35D1F3AE587006DF90E /* UIKit.framework in Frameworks */,
+				218DE35B1F3AE57C006DF90E /* libiconv.tbd in Frameworks */,
+				218DE3591F3AE576006DF90E /* libiconv.2.tbd in Frameworks */,
 				2183FCF51F38028500550F27 /* libopencore-amrwb.a in Frameworks */,
 				2183FD291F38028500550F27 /* Hyphenate.framework in Frameworks */,
 				2183FCF41F38028500550F27 /* libopencore-amrnb.a in Frameworks */,
@@ -614,6 +676,8 @@
 		2183FB391F38003700550F27 /* AndyBus */ = {
 			isa = PBXGroup;
 			children = (
+				218DE3301F3AE463006DF90E /* route.xls */,
+				218DE3311F3AE463006DF90E /* linesite.xls */,
 				2183FD531F380CB300550F27 /* Assets.xcassets */,
 				2183FB3D1F38003700550F27 /* AppDelegate.h */,
 				2183FB3E1F38003700550F27 /* AppDelegate.m */,
@@ -653,6 +717,7 @@
 		2183FB6D1F3800A900550F27 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				218DE3341F3AE531006DF90E /* DHxlsReader */,
 				2183FB821F38028400550F27 /* BlurEffectMenu */,
 				2183FB851F38028400550F27 /* commonTools */,
 				2183FB8E1F38028400550F27 /* CycleScrollView */,
@@ -1185,9 +1250,100 @@
 			path = login;
 			sourceTree = "<group>";
 		};
+		218DE3341F3AE531006DF90E /* DHxlsReader */ = {
+			isa = PBXGroup;
+			children = (
+				218DE3351F3AE531006DF90E /* config.h */,
+				218DE3361F3AE531006DF90E /* cplusplus */,
+				218DE33A1F3AE531006DF90E /* DHxlsReaderIOS */,
+				218DE3411F3AE531006DF90E /* libxls */,
+				218DE3491F3AE531006DF90E /* src */,
+			);
+			path = DHxlsReader;
+			sourceTree = "<group>";
+		};
+		218DE3361F3AE531006DF90E /* cplusplus */ = {
+			isa = PBXGroup;
+			children = (
+				218DE3371F3AE531006DF90E /* main11.cpp */,
+				218DE3381F3AE531006DF90E /* XlsReader.cpp */,
+				218DE3391F3AE531006DF90E /* XlsReader.h */,
+			);
+			path = cplusplus;
+			sourceTree = "<group>";
+		};
+		218DE33A1F3AE531006DF90E /* DHxlsReaderIOS */ = {
+			isa = PBXGroup;
+			children = (
+				218DE33B1F3AE531006DF90E /* DHcell-Private.h */,
+				218DE33C1F3AE531006DF90E /* DHcell.h */,
+				218DE33D1F3AE531006DF90E /* DHcell.m */,
+				218DE33E1F3AE531006DF90E /* DHxlsReaderIOS-Prefix.pch */,
+				218DE33F1F3AE531006DF90E /* DHxlsReaderIOS.h */,
+				218DE3401F3AE531006DF90E /* DHxlsReaderIOS.m */,
+			);
+			path = DHxlsReaderIOS;
+			sourceTree = "<group>";
+		};
+		218DE3411F3AE531006DF90E /* libxls */ = {
+			isa = PBXGroup;
+			children = (
+				218DE3421F3AE531006DF90E /* brdb.c.h */,
+				218DE3431F3AE531006DF90E /* brdb.h */,
+				218DE3441F3AE531006DF90E /* ole.h */,
+				218DE3451F3AE531006DF90E /* xls.h */,
+				218DE3461F3AE531006DF90E /* xlsstruct.h */,
+				218DE3471F3AE531006DF90E /* xlstool.h */,
+				218DE3481F3AE531006DF90E /* xlstypes.h */,
+			);
+			path = libxls;
+			sourceTree = "<group>";
+		};
+		218DE3491F3AE531006DF90E /* src */ = {
+			isa = PBXGroup;
+			children = (
+				218DE34A1F3AE531006DF90E /* getopt.c */,
+				218DE34B1F3AE531006DF90E /* ole.c */,
+				218DE34C1F3AE531006DF90E /* xls.c */,
+				218DE34D1F3AE531006DF90E /* xls2csv.c */,
+				218DE34E1F3AE531006DF90E /* xlstool.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		218DE3621F3AF644006DF90E /* BusLineDetail */ = {
+			isa = PBXGroup;
+			children = (
+				218DE3631F3AF65A006DF90E /* BusLineDetailViewController.h */,
+				218DE3641F3AF65A006DF90E /* BusLineDetailViewController.m */,
+			);
+			path = BusLineDetail;
+			sourceTree = "<group>";
+		};
+		218DE3661F3AF677006DF90E /* BusLineDetail */ = {
+			isa = PBXGroup;
+			children = (
+				218DE3671F3AF698006DF90E /* BusLineDetail0Model.h */,
+				218DE3681F3AF698006DF90E /* BusLineDetail0Model.m */,
+				218DE36A1F3AF6A0006DF90E /* BusLineDetail1Model.h */,
+				218DE36B1F3AF6A0006DF90E /* BusLineDetail1Model.m */,
+			);
+			path = BusLineDetail;
+			sourceTree = "<group>";
+		};
+		218DE36D1F3AF81C006DF90E /* BusLineDetail */ = {
+			isa = PBXGroup;
+			children = (
+				218DE36E1F3AF83D006DF90E /* BusLineDetailTableViewCell.h */,
+				218DE36F1F3AF83D006DF90E /* BusLineDetailTableViewCell.m */,
+			);
+			path = BusLineDetail;
+			sourceTree = "<group>";
+		};
 		21A683211F3814DE0041AC34 /* Index */ = {
 			isa = PBXGroup;
 			children = (
+				218DE3621F3AF644006DF90E /* BusLineDetail */,
 				21E8384F1F39386E00CC21A6 /* LLSearchViewController */,
 				21A683221F3814F90041AC34 /* IndexViewController.h */,
 				21A683231F3814F90041AC34 /* IndexViewController.m */,
@@ -1198,6 +1354,7 @@
 		21A683251F3819B70041AC34 /* IndexModel */ = {
 			isa = PBXGroup;
 			children = (
+				218DE3661F3AF677006DF90E /* BusLineDetail */,
 				21A683261F3819B70041AC34 /* IndexModel.h */,
 				21A683271F3819B70041AC34 /* IndexModel.m */,
 				21A6833B1F383BE70041AC34 /* Index1Model.h */,
@@ -1209,6 +1366,7 @@
 		21A683291F3819C80041AC34 /* IndexView */ = {
 			isa = PBXGroup;
 			children = (
+				218DE36D1F3AF81C006DF90E /* BusLineDetail */,
 				21A6832A1F3819C80041AC34 /* IndexViewTableViewCell.h */,
 				21A6832B1F3819C80041AC34 /* IndexViewTableViewCell.m */,
 				21A6833E1F383C290041AC34 /* Index1TableViewCell.h */,
@@ -1251,6 +1409,11 @@
 		5D3249DB0D6C757A82BC6142 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				218DE3601F3AE598006DF90E /* CoreGraphics.framework */,
+				218DE35E1F3AE58F006DF90E /* Foundation.framework */,
+				218DE35C1F3AE587006DF90E /* UIKit.framework */,
+				218DE35A1F3AE57C006DF90E /* libiconv.tbd */,
+				218DE3581F3AE576006DF90E /* libiconv.2.tbd */,
 				F3982DC79D8EEAC3EB328AA7 /* libPods-AndyBus.a */,
 			);
 			name = Frameworks;
@@ -1412,11 +1575,13 @@
 				210D9B9D1F384043006C39C6 /* logo@3x.png in Resources */,
 				210D9BA31F384043006C39C6 /* shezhi@3x.png in Resources */,
 				210D9B861F384043006C39C6 /* bgbg@3x.png in Resources */,
+				218DE3321F3AE463006DF90E /* route.xls in Resources */,
 				210D9B8B1F384043006C39C6 /* daka@2x.png in Resources */,
 				210D9B851F384043006C39C6 /* bgbg@2x.png in Resources */,
 				210D9BA91F384043006C39C6 /* shouji@3x.png in Resources */,
 				210D9BBE1F384043006C39C6 /* zhongdian@2x.png in Resources */,
 				210D9B8E1F384043006C39C6 /* denglu@3x.png in Resources */,
+				218DE3331F3AE463006DF90E /* linesite.xls in Resources */,
 				210D9BAF1F384043006C39C6 /* sousuo@3x.png in Resources */,
 				210D9BBB1F384043006C39C6 /* xiaoxi@3x.png in Resources */,
 				210D9BA41F384043006C39C6 /* shezhigengduo@2x.png in Resources */,
@@ -1504,12 +1669,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				218DE3551F3AE531006DF90E /* xls.c in Sources */,
 				2183FD1E1F38028500550F27 /* EaseFaceView.m in Sources */,
 				2183FCFC1F38028500550F27 /* NSString+Valid.m in Sources */,
 				2183FCE31F38028500550F27 /* CycleScrollView.m in Sources */,
 				21E838581F3938D200CC21A6 /* LLSearchView.m in Sources */,
 				2183FCFB1F38028500550F27 /* NSDateFormatter+Category.m in Sources */,
 				2183FCEF1F38028500550F27 /* EMCDDeviceManager+Remind.m in Sources */,
+				218DE3561F3AE531006DF90E /* xls2csv.c in Sources */,
 				2183FD211F38028500550F27 /* EaseRecordView.m in Sources */,
 				2183FCFA1F38028500550F27 /* NSDate+Category.m in Sources */,
 				2183FD521F3805C500550F27 /* XRQRequestClient.m in Sources */,
@@ -1534,10 +1701,13 @@
 				2183FCE11F38028500550F27 /* RegularExpressions.m in Sources */,
 				2183FD261F38028500550F27 /* XRQKeyChainStore.m in Sources */,
 				2183FD011F38028500550F27 /* EaseMessageReadManager.m in Sources */,
+				218DE3651F3AF65A006DF90E /* BusLineDetailViewController.m in Sources */,
 				2183FD001F38028500550F27 /* EaseConvertToCommonEmoticonsHelper.m in Sources */,
 				2183FD141F38028500550F27 /* EaseBubbleView+Image.m in Sources */,
 				2183FD091F38028500550F27 /* EaseMessageViewController.m in Sources */,
+				218DE3701F3AF83D006DF90E /* BusLineDetailTableViewCell.m in Sources */,
 				2183FD201F38028500550F27 /* EaseChatBarMoreView.m in Sources */,
+				218DE3501F3AE531006DF90E /* XlsReader.cpp in Sources */,
 				2183FCF01F38028500550F27 /* EMCDDeviceManagerBase.m in Sources */,
 				2183FD071F38028500550F27 /* EaseConversationListViewController.m in Sources */,
 				2183FB801F38011E00550F27 /* XPFTabBar.m in Sources */,
@@ -1547,8 +1717,10 @@
 				2183FD0F1F38028500550F27 /* EaseCustomMessageCell.m in Sources */,
 				2183FD081F38028500550F27 /* EaseLocationViewController.m in Sources */,
 				2183FB7E1F38011E00550F27 /* UIView+XPFExtension.m in Sources */,
+				218DE3521F3AE531006DF90E /* DHxlsReaderIOS.m in Sources */,
 				2183FB7F1F38011E00550F27 /* XPFNavigationController.m in Sources */,
 				2183FCED1F38028500550F27 /* EMCDDeviceManager+Microphone.m in Sources */,
+				218DE3531F3AE531006DF90E /* getopt.c in Sources */,
 				2183FD061F38028500550F27 /* FixFopen.c in Sources */,
 				2183FB7D1F38011E00550F27 /* UIBarButtonItem+XPFExtension.m in Sources */,
 				21E838551F3938B500CC21A6 /* LLSearchSuggestionVC.m in Sources */,
@@ -1561,6 +1733,7 @@
 				2183FD241F38028500550F27 /* XRQGetIP.m in Sources */,
 				2183FD221F38028500550F27 /* EaseConversationCell.m in Sources */,
 				2183FCF21F38028500550F27 /* wav.mm in Sources */,
+				218DE3571F3AE531006DF90E /* xlstool.c in Sources */,
 				21A683281F3819B70041AC34 /* IndexModel.m in Sources */,
 				2183FD1D1F38028500550F27 /* EaseTextView.m in Sources */,
 				2183FD0C1F38028500550F27 /* EaseViewController.m in Sources */,
@@ -1573,8 +1746,10 @@
 				2183FCE61F38028500550F27 /* DotView.m in Sources */,
 				2183FCEE1F38028500550F27 /* EMCDDeviceManager+ProximitySensor.m in Sources */,
 				2183FCE81F38028500550F27 /* EaseUI.m in Sources */,
+				218DE3541F3AE531006DF90E /* ole.c in Sources */,
 				21E838521F39387C00CC21A6 /* LLSearchViewController.m in Sources */,
 				2183FD121F38028500550F27 /* EaseBubbleView+File.m in Sources */,
+				218DE36C1F3AF6A0006DF90E /* BusLineDetail1Model.m in Sources */,
 				2183FCF11F38028500550F27 /* amrFileCodec.mm in Sources */,
 				2183FD0E1F38028500550F27 /* EaseBaseMessageCell.m in Sources */,
 				2183FD1A1F38028500550F27 /* EaseChatToolbar.m in Sources */,
@@ -1587,6 +1762,7 @@
 				2183FCEB1F38028500550F27 /* EMAudioRecorderUtil.m in Sources */,
 				2183FB811F38011E00550F27 /* XPFTabBarController.m in Sources */,
 				2183FD171F38028500550F27 /* EaseBubbleView+Video.m in Sources */,
+				218DE3691F3AF698006DF90E /* BusLineDetail0Model.m in Sources */,
 				21A6833D1F383BE70041AC34 /* Index1Model.m in Sources */,
 				21A874B11F39403F00FB7349 /* NearViewController.m in Sources */,
 				2183FCF81F38028500550F27 /* EaseMessageModel.m in Sources */,
@@ -1594,7 +1770,9 @@
 				2183FCE21F38028500550F27 /* CollectionViewCell.m in Sources */,
 				2183FCF71F38028500550F27 /* EaseConversationModel.m in Sources */,
 				2183FCE71F38028500550F27 /* PageControl.m in Sources */,
+				218DE34F1F3AE531006DF90E /* main11.cpp in Sources */,
 				2183FCEA1F38028500550F27 /* EMAudioPlayerUtil.m in Sources */,
+				218DE3511F3AE531006DF90E /* DHcell.m in Sources */,
 				2183FB3C1F38003700550F27 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
