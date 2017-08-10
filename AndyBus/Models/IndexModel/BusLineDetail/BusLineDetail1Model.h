@@ -13,4 +13,6 @@
 @property(nonatomic,copy)NSString* T_NAME;
 @property(nonatomic,copy)NSString* STATION_ID;
 @property(nonatomic,copy)NSString* DIRECTION;
+
+@property(nonatomic,assign)BOOL isReceived;
 @end

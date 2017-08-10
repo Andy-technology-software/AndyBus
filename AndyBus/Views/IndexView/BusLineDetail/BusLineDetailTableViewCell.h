@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class BusLineDetail1Model;
 @interface BusLineDetailTableViewCell : UITableViewCell
+- (void)configCellWithModel:(BusLineDetail1Model *)model;
 
 @end

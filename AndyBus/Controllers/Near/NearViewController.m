@@ -24,6 +24,8 @@
     self.title = @"附近";
     
     [self makeSearchBtn];
+    
+//    [self downLoadRoads];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -97,6 +99,64 @@
     LLSearchViewController *seachVC = [[LLSearchViewController alloc] init];
     [self.navigationController pushViewController:seachVC animated:YES];
 }
+
+
+- (void)downLoadRoads{
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    
+    NSURL *URL = [NSURL URLWithString:@"http://27.223.79.50:86/20150812140713/route.xls"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    
+    NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+        NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
+        return [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
+    } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+        NSLog(@"File downloaded to: %@", filePath);
+        
+        NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"route.xls"];
+        DHxlsReader *reader = [DHxlsReader xlsReaderFromFile:[filePath absoluteString]];
+        assert(reader);
+#if 0
+        [reader startIterator:0];
+        
+        while(YES) {c
+            DHcell *cell = [reader nextCell];
+            if(cell.type == cellBlank) break;
+            
+            text = [text stringByAppendingFormat:@"\n%@\n", [cell dump]];
+        }
+#else
+        int row = 2;
+        while(YES) {
+            
+            DHcell *cell0 = [reader cellInWorkSheetIndex:0 row:row col:1];
+            if(cell0.type == cellBlank) break;
+            DHcell *cell = [reader cellInWorkSheetIndex:0 row:row col:2];
+            if(cell.type == cellBlank) break;
+            DHcell *cell2 = [reader cellInWorkSheetIndex:0 row:row col:4];
+            if(cell2.type == cellBlank) break;
+            DHcell *cell3 = [reader cellInWorkSheetIndex:0 row:row col:5];
+            if(cell3.type == cellBlank) break;
+            DHcell *cell6 = [reader cellInWorkSheetIndex:0 row:row col:6];
+            if(cell6.type == cellBlank) break;
+            DHcell *cell7 = [reader cellInWorkSheetIndex:0 row:row col:7];
+            if(cell7.type == cellBlank) break;
+            DHcell *cell8 = [reader cellInWorkSheetIndex:0 row:row col:8];
+            if(cell8.type == cellBlank) break;
+            DHcell *cell9 = [reader cellInWorkSheetIndex:0 row:row col:8];
+            if(cell9.type == cellBlank) break;
+            DHcell *cell1 = [reader cellInWorkSheetIndex:0 row:row col:3];
+            NSLog(@"\n  几路车：%@\n   查表用的号：%@\n   票价:%@\n   起点:%@\n   终点:%@\n",[cell0 dump], [cell dump], [cell1 dump], [cell2 dump], [cell3 dump]);
+            row++;
+        }
+#endif
+        
+    }];
+    [downloadTask resume];
+}
+
+
 
 #pragma mark - 重写返回按钮方法
 - (void)createLeftNvc{
